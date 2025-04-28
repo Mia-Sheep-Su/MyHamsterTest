@@ -10,6 +10,7 @@ export default function QuizPage({ onComplete }) {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState([]);
   const navigate = useNavigate();
+  const base = import.meta.env.BASE_URL;
 
   const handleAnswer = (option) => {
     setAnswers([...answers, option]);
@@ -31,7 +32,7 @@ export default function QuizPage({ onComplete }) {
         <h3 className={styles.questionText}>{currentQuestion.text}</h3>
 
         <img
-          src={currentQuestion.img}
+          src={base + currentQuestion.img}
           alt="題目圖片"
           className={styles.questionImage}
         />
