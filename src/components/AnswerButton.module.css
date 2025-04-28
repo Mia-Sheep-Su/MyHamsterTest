@@ -1,0 +1,24 @@
+.answerButton {
+    background-color: #c58b6b;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    margin: 0;
+    border: none;
+    border-radius: 999px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.answerButton:hover {
+    background-color: #b3785b;
+    transform: scale(1.03);
+}
+
+.answerButton:active {
+    background-color: #9f6449;
+    transform: scale(0.98);
+}

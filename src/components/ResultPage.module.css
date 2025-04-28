@@ -1,0 +1,153 @@
+.home {
+    cursor: url("/img/paws.png"), help;
+    width: 100vw;
+    /* 讓內容填滿大部分螢幕 */
+    max-width: 450px;
+    /* 限制最大寬度，避免在大螢幕上太寬 */
+    margin: auto;
+}
+
+.result-share {
+    background: #f0f9ef;
+    padding: 1rem;
+    text-align: center;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.download-tip {
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.downloadtext {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.social-buttons span {
+    font-size: 14px;
+}
+
+.social-buttons .icon {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.social-buttons .fb {
+    background-image: url('/assets/icon-fb.png');
+}
+
+.social-buttons .ig {
+    background-image: url('/assets/icon-ig.png');
+}
+
+.social-buttons .line {
+    background-image: url('/assets/icon-line.png');
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.links .profile {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: white;
+    border-radius: 10px;
+    padding: 0.8rem 1rem 0.5rem 1rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: black;
+    width: 20vw;
+    font-size: x-small;
+    line-height: 1;
+}
+
+.links .profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.links .github {
+    display: flex;
+    align-items: center;
+    background: white;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: black;
+    width: 20vw;
+}
+
+.links .github img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.berry-section {
+    margin-top: 2rem;
+}
+
+.berry-section p {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    gap: 0.5rem;
+    padding: 0 1rem;
+}
+
+.carousel img {
+    width: 15vw;
+    border-radius: 10px;
+    flex-shrink: 0;
+    scroll-snap-align: center;
+}
+
+.retryButton {
+    margin: 1.5rem auto;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #ffa25b;
+    border: none;
+    border-radius: 999px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    display: block;
+}
+
+.retryButton:hover {
+    background-color: #ff8a3d;
+    transform: scale(1.05);
+}

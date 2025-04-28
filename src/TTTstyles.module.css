@@ -1,0 +1,160 @@
+.square {
+  border: 1px solid #999;
+  float: left;
+  padding: 0;
+  line-height: 8vw;
+  /* 使用 vw 讓按鈕大小根據視窗寬度變化 */
+  height: 8vw;
+  width: 8vw;
+  text-align: center;
+  background: transparent;
+}
+
+.btn-square {
+  background: transparent;
+  height: 8vw;
+  width: 8vw;
+  text-align: center;
+  outline: none;
+  border: 1px solid transparent;
+  font-size: 4vw;
+}
+
+.board {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+}
+
+.board-row:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+.status {
+  color: #fff;
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  text-shadow: 0 0 10px #DBCCFF;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  text-align: center;
+  font-family: sans-serif;
+  margin: 20px;
+  padding: 0;
+  background: #232323;
+}
+
+.game-info {
+  margin-left: 20px;
+}
+
+.gray-square {
+  animation: neon-shine 2s linear infinite;
+}
+
+@keyframes neon-shine {
+  0% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 0;
+  }
+
+  100% {
+    color: #232323;
+  }
+}
+
+.centered {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.x-square {
+  color: #fff;
+  text-shadow: 0 0 10px #67e8d9;
+}
+
+.o-square {
+  color: #fff;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px #ff4141;
+}
+
+.reset-button {
+  margin-top: 25px;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  background-color: transparent;
+  border: 2px solid #DBCCFF;
+  color: #DBCCFF;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  cursor: pointer;
+  border-radius: 10px
+}
+
+.reset-button:hover {
+  background-color: #DBCCFF;
+  color: #232323;
+  box-shadow: 0 0 10px #DBCCFF, 0 0 40px #DBCCFF;
+}
+
+/* ========== ✅ RWD 響應式設計 ========== */
+/* 🔹 平板（小於 768px） */
+@media (max-width: 768px) {
+  .square {
+    width: 12vw;
+    height: 12vw;
+    line-height: 12vw;
+  }
+
+  .btn-square {
+    width: 12vw;
+    height: 12vw;
+    font-size: 5vw;
+  }
+
+  .reset-button {
+    font-size: 1em;
+    padding: 8px 16px;
+  }
+}
+
+/* 🔹 手機（小於 480px） */
+@media (max-width: 480px) {
+  .square {
+    width: 20vw;
+    height: 20vw;
+    line-height: 20vw;
+  }
+
+  .btn-square {
+    width: 20vw;
+    height: 20vw;
+    font-size: 8vw;
+  }
+
+  .status {
+    font-size: 1.2em;
+  }
+
+  .reset-button {
+    font-size: 0.9em;
+    padding: 6px 12px;
+    letter-spacing: 2px;
+  }
+}

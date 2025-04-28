@@ -1,0 +1,63 @@
+.home {
+    cursor: url("/img/paws.png"), help;
+    width: 100vw;
+    /* 讓內容填滿大部分螢幕 */
+    max-width: 450px;
+    /* 限制最大寬度，避免在大螢幕上太寬 */
+    height: 100vh;
+    margin: auto;
+}
+
+.nameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1.5rem;
+    background-color: #faf4e6;
+    text-align: center;
+}
+
+.nameContainer h2 {
+    font-size: 1.5rem;
+    color: #5f4339;
+    margin-bottom: 1.5rem;
+}
+
+.nameInput {
+    padding: 0.75rem 1rem;
+    width: 80%;
+    max-width: 320px;
+    font-size: 1rem;
+    border: 2px solid #d3bfa7;
+    border-radius: 999px;
+    margin-bottom: 1.5rem;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.nameInput:focus {
+    border-color: #c58b6b;
+}
+
+.confirmButton {
+    background-color: #c58b6b;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 999px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.confirmButton:hover {
+    background-color: #b3785b;
+    transform: scale(1.03);
+}
+
+.confirmButton:active {
+    background-color: #9f6449;
+    transform: scale(0.98);
+}
