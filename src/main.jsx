@@ -6,7 +6,7 @@ import TicTacToe from "./Tic-Tac-Toe";
 import APP from "./App";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <BrowserRouter basename="/MyHamsterTest/">
+  <BrowserRouter basename="/MyHamsterTest">
     <Routes>
       <Route path="/" element={<Welcome />} />
       <Route path="/tic-tac-toe" element={<TicTacToe />} />
