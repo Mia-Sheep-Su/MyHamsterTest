@@ -159,7 +159,7 @@
     left: 2%;
     width: 53%;
     height: 100%;
-    background-image: url("/img/倉鼠icon_黑白.png");
+    background-image: url("${import.meta.env.BASE_URL}img/倉鼠icon_黑白.png");
     background-size: cover;
     background-position: center;
     transition: 0.5s ease;
@@ -172,7 +172,7 @@
 .Switch:checked+.hamster::after {
     left: calc(100% - 2%);
     transform: translateX(-100%);
-    background-image: url("/img/倉鼠icon.png");
+    background-image: url("${import.meta.env.BASE_URL}img/倉鼠icon.png");
 }
 
 @media screen and (max-width: 1024px) {
