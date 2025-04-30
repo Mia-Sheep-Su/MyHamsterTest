@@ -49,6 +49,10 @@
     cursor: pointer;
 }
 
+.social-buttons .nativeShare {
+    background-image: url('/assets/icon-share.png');
+}
+
 .social-buttons .fb {
     background-image: url('/assets/icon-fb.png');
 }

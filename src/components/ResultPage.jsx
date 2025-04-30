@@ -56,10 +56,15 @@ export default function ResultPage({ name, result }) {
   const canvasRef = useRef(null);
   const navigate = useNavigate(); // 使用 React Router 來導頁
   const [imgDataUrl, setImgDataUrl] = useState("");
+  const [canUseShare, setCanUseShare] = useState(false);
 
   useEffect(() => {
     document.body.style.backgroundColor = "#EBF4E9";
     const base = import.meta.env.BASE_URL; //引導路徑
+
+    if (navigator.share) {
+      setCanUseShare(true);
+    } //判定是否可執行原生分享
 
     const canvas = canvasRef.current;
     if (!canvas || !resultData) return;
@@ -178,23 +183,39 @@ export default function ResultPage({ name, result }) {
   }, [name, resultData]);
 
   const handleFBShare = () => {
+    const shareText = encodeURIComponent("你是甚麼鼠?🐹 超可愛心理測驗 👉");
     const url = encodeURIComponent(window.location.href);
     window.open(
-      `https://www.facebook.com/sharer/sharer.php?u=${url}`,
+      `https://www.facebook.com/sharer/sharer.php?u=${url}&text=${shareText}`,
       "_blank"
     );
   };
 
   const handleLineShare = () => {
+    const shareText = encodeURIComponent("你是甚麼鼠?🐹 超可愛心理測驗 👉");
     const url = encodeURIComponent(window.location.href);
-    window.open(
-      `https://social-plugins.line.me/lineit/share?url=${url}`,
-      "_blank"
-    );
+    const shareUrl = `https://social-plugins.line.me/lineit/share?u=${url}&text=${shareText}`;
+
+    window.open(shareUrl, "_blank");
   };
 
   const handleIGRedirect = () => {
     window.location.href = "instagram://user?username=m_0713_su";
+  };
+
+  const handleNativeShare = () => {
+    if (navigator.share) {
+      navigator
+        .share({
+          title: "哈囉！那你鼠咧？",
+          text: "我剛做完一個超可愛的倉鼠心理測驗，點進來看看你是哪種倉鼠吧 🐹",
+          url: window.location.href,
+        })
+        .then(() => console.log("分享成功"))
+        .catch((error) => console.log("分享錯誤：", error));
+    } else {
+      alert("你的瀏覽器不支援原生分享，請使用 Facebook 或 LINE 按鈕。");
+    }
   };
 
   return (
@@ -223,22 +244,31 @@ export default function ResultPage({ name, result }) {
           </a>
         </p>
         <div className={styles["social-buttons"]}>
-          <span>分享到：</span>
-
-          <button
-            className={`${styles.icon} ${styles.fb}`}
-            onClick={handleFBShare}
-          ></button>
-
-          <button
-            className={`${styles.icon} ${styles.ig}`}
-            onClick={handleIGRedirect}
-          ></button>
-
-          <button
-            className={`${styles.icon} ${styles.line}`}
-            onClick={handleLineShare}
-          ></button>
+          {canUseShare ? (
+            <>
+              <span>分享你的結果：</span>
+              <button
+                onClick={handleNativeShare}
+                className={styles.nativeShare}
+              ></button>
+            </>
+          ) : (
+            <>
+              <span>分享到：</span>
+              <button
+                className={`${styles.icon} ${styles.fb}`}
+                onClick={handleFBShare}
+              ></button>
+              <button
+                className={`${styles.icon} ${styles.ig}`}
+                onClick={handleIGRedirect}
+              ></button>
+              <button
+                className={`${styles.icon} ${styles.line}`}
+                onClick={handleLineShare}
+              ></button>
+            </>
+          )}
         </div>
 
         <button onClick={() => navigate("/")} className={styles.retryButton}>
