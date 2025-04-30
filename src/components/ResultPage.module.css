@@ -175,7 +175,7 @@
         font-size: 0.85rem;
         align-items: center;
         text-align: center;
-        width: 60vw;
+        width: 50vw;
     }
 
     .links .profile img,
@@ -209,8 +209,8 @@
     }
 
     .carousel img {
-        width: 45px;
-        height: 45px;
+        width: 40vw;
+        height: auto;
     }
 
     .social-buttons {
