@@ -179,7 +179,7 @@
 @media screen and (max-width: 1024px) {
     .home {
         max-width: none;
-        border: none;
+        margin: 0;
     }
 
     .titlebox {
@@ -222,7 +222,6 @@
 @media (max-width: 1024px) and (max-height:600px) {
     .home {
         max-width: 450px;
-        border: none;
     }
 
     .titlebox {
