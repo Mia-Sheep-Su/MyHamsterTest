@@ -151,3 +151,85 @@
     background-color: #ff8a3d;
     transform: scale(1.05);
 }
+
+@media (max-width: 480px) {
+    .social-buttons {
+        gap: 0.5rem;
+    }
+
+    .icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .retryButton {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .profile,
+    .github {
+        flex-direction: row;
+        padding: 0.6rem;
+        font-size: 0.85rem;
+    }
+
+    .profile img,
+    .github img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .carousel img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 360px) {
+    .retryButton {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .profile,
+    .github {
+        font-size: 0.75rem;
+        padding: 0.5rem;
+    }
+
+    .profile img,
+    .github img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .carousel img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .social-buttons {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .links {
+        gap: 0.5rem;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .retryButton {
+        font-size: min(4vw, 1rem);
+    }
+
+}
