@@ -251,7 +251,10 @@ export default function ResultPage({ name, result }) {
             target="_blank"
             className={styles.profile}
           >
-            <img src="/assets/my-instagram.jpg" alt="IG" />
+            <img
+              src={`${import.meta.env.BASE_URL}/assets/my-instagram.jpg`}
+              alt="IG"
+            />
             <div>
               <strong>@m_0713_su</strong>
               <p>銤烊｜日常 吃吃喝喝 玩樂</p>
@@ -262,7 +265,10 @@ export default function ResultPage({ name, result }) {
             target="_blank"
             className={styles.github}
           >
-            <img src="/assets/my-github.jpg" alt="github" />
+            <img
+              src={`${import.meta.env.BASE_URL}/assets/my-github.jpg`}
+              alt="github"
+            />
             <div>Mia-Sheep-Su</div>
           </a>
         </div>
@@ -270,14 +276,23 @@ export default function ResultPage({ name, result }) {
           <p className={styles.downloadtext}>
             分享我家的倉鼠
             <br />
-            <a href="https://www.instagram.com/explore/search/keyword/?q=%23berry%E6%98%AF%E4%B8%80%E9%9A%BB%E5%80%89%E9%BC%A0">
+            <a href="https://www.instagram.com/https://www.instagram.com/stories/highlights/18001313105423954/">
               #Berry是一隻倉鼠
             </a>
           </p>
           <div className={styles.carousel}>
-            <img src="/assets/berry1.jpg" alt="Berry1" />
-            <img src="/assets/berry2.jpg" alt="Berry2" />
-            <img src="/assets/berry3.jpg" alt="Berry3" />
+            <img
+              src={`${import.meta.env.BASE_URL}/assets/berry1.jpg`}
+              alt="Berry1"
+            />
+            <img
+              src={`${import.meta.env.BASE_URL}/assets/berry2.jpg`}
+              alt="Berry2"
+            />
+            <img
+              src={`${import.meta.env.BASE_URL}/assets/berry3.jpg`}
+              alt="Berry3"
+            />
           </div>
         </div>
       </div>
