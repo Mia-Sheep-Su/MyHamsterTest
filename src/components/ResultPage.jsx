@@ -249,7 +249,7 @@ export default function ResultPage({ name, result }) {
               <span>分享你的結果：</span>
               <button
                 onClick={handleNativeShare}
-                className={styles.nativeShare}
+                className={`${styles.icon} ${styles.nativeShare}`}
               ></button>
             </>
           ) : (
