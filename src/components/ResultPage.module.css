@@ -95,6 +95,10 @@
     border-radius: 50%;
 }
 
+.links .profiletext {
+    text-align: left
+}
+
 .links .github {
     display: flex;
     align-items: center;

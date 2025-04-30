@@ -285,7 +285,7 @@ export default function ResultPage({ name, result }) {
               src={`${import.meta.env.BASE_URL}/assets/my-instagram.jpg`}
               alt="IG"
             />
-            <div>
+            <div className={styles.profiletext}>
               <strong>@m_0713_su</strong>
               <p>銤烊｜日常 吃吃喝喝 玩樂</p>
             </div>
@@ -299,7 +299,9 @@ export default function ResultPage({ name, result }) {
               src={`${import.meta.env.BASE_URL}/assets/my-github.jpg`}
               alt="github"
             />
-            <div>Mia-Sheep-Su</div>
+            <div>
+              <p>Mia-Sheep-Su</p>
+            </div>
           </a>
         </div>
         <div className={styles["berry-section"]}>
