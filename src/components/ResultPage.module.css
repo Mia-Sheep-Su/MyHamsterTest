@@ -159,18 +159,13 @@
         gap: 0.5rem;
     }
 
-    .icon {
-        width: 36px;
-        height: 36px;
-    }
-
     .retryButton {
         font-size: 0.9rem;
         padding: 0.5rem 1.2rem;
     }
 
-    .profile,
-    .github {
+    .links .profile,
+    .links .github {
         flex-direction: row;
         padding: 0.6rem;
         font-size: 0.85rem;
@@ -178,8 +173,8 @@
         text-align: center;
     }
 
-    .profile img,
-    .github img {
+    .links .profile img,
+    .links .github img {
         width: 40px;
         height: 40px;
     }
@@ -187,11 +182,6 @@
     .carousel img {
         width: 80px;
         height: 80px;
-    }
-
-    .icon {
-        width: 36px;
-        height: 36px;
     }
 }
 
@@ -201,19 +191,14 @@
         padding: 0.4rem 0.8rem;
     }
 
-    .icon {
-        width: 32px;
-        height: 32px;
-    }
-
-    .profile,
-    .github {
+    .links .profile,
+    .links .github {
         font-size: 0.75rem;
         padding: 0.5rem;
     }
 
-    .profile img,
-    .github img {
+    .links .profile img,
+    .links .github img {
         width: 36px;
         height: 36px;
     }
