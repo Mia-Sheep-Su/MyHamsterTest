@@ -32,7 +32,7 @@ export default function QuizPage({ onComplete }) {
         <h3 className={styles.questionText}>{currentQuestion.text}</h3>
 
         <img
-          src={base + currentQuestion.img}
+          src={`${base}${currentQuestion.img}`}
           alt="題目圖片"
           className={styles.questionImage}
         />

@@ -56,6 +56,7 @@ export default function ResultPage({ name, result }) {
   const canvasRef = useRef(null);
   const navigate = useNavigate(); // 使用 React Router 來導頁
   const [imgDataUrl, setImgDataUrl] = useState("");
+  const base = import.meta.env.BASE_URL; //引導路徑
 
   useEffect(() => {
     document.body.style.backgroundColor = "#EBF4E9";
@@ -80,19 +81,19 @@ export default function ResultPage({ name, result }) {
 
     // ✅ 圖片物件
     const bgImg = new Image();
-    bgImg.src = resultData?.image;
+    bgImg.src = base + resultData?.image;
 
     const characterImg = new Image();
-    characterImg.src = resultData?.characterImage;
+    characterImg.src = base + resultData?.characterImage;
 
     const nameTagImg = new Image();
-    nameTagImg.src = resultData?.nameTagImage;
+    nameTagImg.src = base + resultData?.nameTagImage;
 
     const matchTagImg = new Image();
-    matchTagImg.src = resultData?.matchTagImage;
+    matchTagImg.src = base + resultData?.matchTagImage;
 
     const nemesisTagImg = new Image();
-    nemesisTagImg.src = resultData?.nemesisTagImage;
+    nemesisTagImg.src = base + resultData?.nemesisTagImage;
 
     // ✅ 等待所有圖片載入後才開始繪製
     Promise.all([
