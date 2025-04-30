@@ -57,6 +57,7 @@ export default function ResultPage({ name, result }) {
   const navigate = useNavigate(); // 使用 React Router 來導頁
   const [imgDataUrl, setImgDataUrl] = useState("");
   const [canUseShare, setCanUseShare] = useState(false);
+  const [isDrawing, setIsDrawing] = useState(true);
 
   useEffect(() => {
     document.body.style.backgroundColor = "#EBF4E9";
@@ -178,6 +179,7 @@ export default function ResultPage({ name, result }) {
       setTimeout(() => {
         const dataURL = canvas.toDataURL("image/png");
         setImgDataUrl(dataURL);
+        setIsDrawing(false); // ✅ 畫完了才顯示結果
       }, 300);
     });
   }, [name, resultData]);
@@ -228,15 +230,31 @@ export default function ResultPage({ name, result }) {
           height={797}
           style={{ display: "none" }}
         />
-        {imgDataUrl && (
-          <div>
+        {isDrawing ? (
+          <div style={{ textAlign: "center" }}>
             <img
-              src={imgDataUrl}
-              alt="你的結果圖"
-              style={{ width: "100%", maxWidth: "600px", borderRadius: "12px" }}
+              src={`${import.meta.env.BASE_URL}/img/倉鼠icon.png`}
+              alt="loading"
+              className={styles.spin}
             />
+            <p>正在產生你的倉鼠結果圖...</p>
           </div>
+        ) : (
+          imgDataUrl && (
+            <div>
+              <img
+                src={imgDataUrl}
+                alt="你的結果圖"
+                style={{
+                  width: "100%",
+                  maxWidth: "600px",
+                  borderRadius: "12px",
+                }}
+              />
+            </div>
+          )
         )}
+
         <p className={styles.downloadtext}>
           長按圖片下載測驗結果，或是
           <a href={imgDataUrl} download="result.png">
