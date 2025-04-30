@@ -56,10 +56,10 @@ export default function ResultPage({ name, result }) {
   const canvasRef = useRef(null);
   const navigate = useNavigate(); // 使用 React Router 來導頁
   const [imgDataUrl, setImgDataUrl] = useState("");
-  const base = import.meta.env.BASE_URL; //引導路徑
 
   useEffect(() => {
     document.body.style.backgroundColor = "#EBF4E9";
+    const base = import.meta.env.BASE_URL; //引導路徑
 
     const canvas = canvasRef.current;
     if (!canvas || !resultData) return;
