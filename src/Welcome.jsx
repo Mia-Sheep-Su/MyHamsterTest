@@ -23,7 +23,10 @@ function Welcome() {
       <div className={styles.home}>
         <div className={styles.titlebox}>
           <div className={styles.backwheel}>
-            <img className={styles.titleimg} src="img/titlex4.png" />
+            <img
+              className={styles.titleimg}
+              src={`${import.meta.env.BASE_URL}/img/titlex4.png`}
+            />
             <div className={styles.hamsterbox}>
               <input
                 type="checkbox"
