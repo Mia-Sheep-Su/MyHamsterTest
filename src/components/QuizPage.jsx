@@ -38,7 +38,7 @@ export default function QuizPage({ onComplete }) {
         }
       };
     });
-  }, []);
+  }, [base]);
 
   if (loading) {
     return (
