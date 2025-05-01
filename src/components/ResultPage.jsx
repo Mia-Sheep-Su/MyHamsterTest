@@ -231,9 +231,16 @@ export default function ResultPage({ name, result }) {
           style={{ display: "none" }}
         />
         {isDrawing ? (
-          <div style={{ textAlign: "center" }}>
+          <div
+            style={{
+              textAlign: "center",
+              width: "100%",
+              maxWidth: "600px",
+              height: "80hv",
+            }}
+          >
             <img
-              src={`${import.meta.env.BASE_URL}/img/倉鼠icon.png`}
+              src={`${import.meta.env.BASE_URL}/icon-001.ico`}
               alt="loading"
               className={styles.spin}
             />
@@ -241,57 +248,60 @@ export default function ResultPage({ name, result }) {
           </div>
         ) : (
           imgDataUrl && (
-            <div>
-              <img
-                src={imgDataUrl}
-                alt="你的結果圖"
-                style={{
-                  width: "100%",
-                  maxWidth: "600px",
-                  borderRadius: "12px",
-                }}
-              />
-            </div>
+            <>
+              <div>
+                <img
+                  src={imgDataUrl}
+                  alt="你的結果圖"
+                  style={{
+                    width: "100%",
+                    maxWidth: "600px",
+                    borderRadius: "12px",
+                  }}
+                />
+              </div>
+              <p className={styles.downloadtext}>
+                長按圖片下載測驗結果，或是
+                <a href={imgDataUrl} download="result.png">
+                  <button>點我下載圖片</button>
+                </a>
+              </p>
+              <div className={styles["social-buttons"]}>
+                {canUseShare ? (
+                  <>
+                    <span>分享你的結果：</span>
+                    <button
+                      onClick={handleNativeShare}
+                      className={`${styles.icon} ${styles.nativeShare}`}
+                    ></button>
+                  </>
+                ) : (
+                  <>
+                    <span>分享到：</span>
+                    <button
+                      className={`${styles.icon} ${styles.fb}`}
+                      onClick={handleFBShare}
+                    ></button>
+                    <button
+                      className={`${styles.icon} ${styles.ig}`}
+                      onClick={handleIGRedirect}
+                    ></button>
+                    <button
+                      className={`${styles.icon} ${styles.line}`}
+                      onClick={handleLineShare}
+                    ></button>
+                  </>
+                )}
+              </div>
+              <button
+                onClick={() => navigate("/")}
+                className={styles.retryButton}
+              >
+                重新測驗
+              </button>
+            </>
           )
         )}
-
-        <p className={styles.downloadtext}>
-          長按圖片下載測驗結果，或是
-          <a href={imgDataUrl} download="result.png">
-            <button>點我下載圖片</button>
-          </a>
-        </p>
-        <div className={styles["social-buttons"]}>
-          {canUseShare ? (
-            <>
-              <span>分享你的結果：</span>
-              <button
-                onClick={handleNativeShare}
-                className={`${styles.icon} ${styles.nativeShare}`}
-              ></button>
-            </>
-          ) : (
-            <>
-              <span>分享到：</span>
-              <button
-                className={`${styles.icon} ${styles.fb}`}
-                onClick={handleFBShare}
-              ></button>
-              <button
-                className={`${styles.icon} ${styles.ig}`}
-                onClick={handleIGRedirect}
-              ></button>
-              <button
-                className={`${styles.icon} ${styles.line}`}
-                onClick={handleLineShare}
-              ></button>
-            </>
-          )}
-        </div>
-
-        <button onClick={() => navigate("/")} className={styles.retryButton}>
-          重新測驗
-        </button>
 
         <div className={styles.links}>
           <a
@@ -304,7 +314,7 @@ export default function ResultPage({ name, result }) {
               alt="IG"
             />
             <div className={styles.profiletext}>
-              <strong>@m_0713_su</strong>
+              <p>@m_0713_su</p>
               <p>銤烊｜日常 吃吃喝喝 玩樂</p>
             </div>
           </a>

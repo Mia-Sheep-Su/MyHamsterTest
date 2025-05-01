@@ -110,6 +110,7 @@
     text-decoration: none;
     color: black;
     width: 20vw;
+    line-height: 2;
 }
 
 .links .github img {
