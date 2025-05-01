@@ -60,12 +60,13 @@ export default function QuizPage({ onComplete }) {
     <div className={styles.home}>
       <div className={styles.quizContainer}>
         <h3 className={styles.questionText}>{currentQuestion.text}</h3>
-
-        <img
-          src={`${base}${currentQuestion.img}`}
-          alt="題目圖片"
-          className={styles.questionImage}
-        />
+        <div className={styles.questionImgbox}>
+          <img
+            src={`${base}${currentQuestion.img}`}
+            alt="題目圖片"
+            className={styles.questionImage}
+          />
+        </div>
 
         <div className={styles.optionsContainer}>
           {currentQuestion.options.map((option, i) => (

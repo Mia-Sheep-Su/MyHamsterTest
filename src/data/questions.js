@@ -18,7 +18,7 @@ export const questions = [
         scores: { ㄎㄧㄤ鼠: 3, 番鼠: 3, 鼠來寶: 3, 鼠巴拉西: 1 },
       },
     ],
-    img: "/img/Q/Q1.png",
+    img: "/img/Q/Q1.jpg",
   },
   {
     //第二題
@@ -34,7 +34,7 @@ export const questions = [
       },
       { text: "無視", scores: { 鼠巴拉西: 3, 邊緣子: 2, 煩惱鼠: 1 } },
     ],
-    img: "/img/Q/Q2.png",
+    img: "/img/Q/Q2.jpg",
   },
   {
     //第三題
@@ -53,7 +53,7 @@ export const questions = [
         scores: { 番鼠: 1, 邊緣子: 1, 鼠巴拉西: 2 },
       },
     ],
-    img: "/img/Q/Q3.png",
+    img: "/img/Q/Q3.jpg",
   },
   {
     //第四題
@@ -66,7 +66,7 @@ export const questions = [
         scores: { 鼠勾以: 3, 煩惱鼠: 2, 邊緣子: 1, 鼠來寶: 2 },
       },
     ],
-    img: "/img/Q/Q4.png",
+    img: "/img/Q/Q4.jpg",
   },
   {
     //第五題
@@ -86,7 +86,7 @@ export const questions = [
         },
       },
     ],
-    img: "/img/Q/Q5.png",
+    img: "/img/Q/Q5.jpg",
   },
   {
     //第六題
@@ -102,7 +102,7 @@ export const questions = [
       },
       { text: "爬上去看看！", scores: { 番鼠: 3, 鼠來寶: 3 } },
     ],
-    img: "/img/Q/Q6.png",
+    img: "/img/Q/Q6.jpg",
   },
   {
     //第七題
@@ -118,7 +118,7 @@ export const questions = [
       },
       { text: "試圖往滾輪上爬（？", scores: { ㄎㄧㄤ鼠: 3, 鼠巴拉西: 3 } },
     ],
-    img: "/img/Q/Q7.png",
+    img: "/img/Q/Q7.jpg",
   },
   {
     //第八題
@@ -138,6 +138,6 @@ export const questions = [
         },
       },
     ],
-    img: "/img/Q/Q8.png",
+    img: "/img/Q/Q8.jpg",
   },
 ];

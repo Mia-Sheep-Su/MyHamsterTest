@@ -30,11 +30,27 @@
     box-sizing: border-box;
 }
 
-.questionImage {
-    width: 80%;
+.questionImgbox {
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    /* 或 600px 若圖片是方形 */
+    margin: 0 auto;
     border-radius: 12px;
-    background-color: #ddd;
-    margin-bottom: 1.5rem;
+    background-color: #f8f8f8;
+    /* 預設背景，避免空白跳動 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.questionImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 自動填滿並裁切圖片 */
+    border-radius: 12px;
 }
 
 .optionsContainer {
