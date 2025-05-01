@@ -30,7 +30,7 @@ export default function QuizPage({ onComplete }) {
 
     questions.forEach((q) => {
       const img = new Image();
-      img.src = q.img;
+      img.src = base + q.img;
       img.onload = () => {
         loadedCount++;
         if (loadedCount === questions.length) {

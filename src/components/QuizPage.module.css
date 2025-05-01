@@ -50,3 +50,21 @@
     color: #666;
     font-size: 0.9rem;
 }
+
+.spin {
+    animation: spin 1.2s linear infinite;
+    width: 100px;
+    margin: 0 auto;
+    display: block;
+    filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.2));
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
