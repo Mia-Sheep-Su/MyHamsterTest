@@ -185,18 +185,16 @@ export default function ResultPage({ name, result }) {
   }, [name, resultData]);
 
   const handleFBShare = () => {
-    const shareText = encodeURIComponent("你是甚麼鼠?🐹 超可愛心理測驗 👉");
     const url = encodeURIComponent(window.location.href);
     window.open(
-      `https://www.facebook.com/sharer/sharer.php?u=${url}&text=${shareText}`,
+      `https://www.facebook.com/sharer/sharer.php?u=${url}`,
       "_blank"
     );
   };
 
   const handleLineShare = () => {
-    const shareText = encodeURIComponent("你是甚麼鼠?🐹 超可愛心理測驗 👉");
     const url = encodeURIComponent(window.location.href);
-    const shareUrl = `https://social-plugins.line.me/lineit/share?u=${url}&text=${shareText}`;
+    const shareUrl = `https://social-plugins.line.me/lineit/share?url=${url}`;
 
     window.open(shareUrl, "_blank");
   };

@@ -30,9 +30,9 @@ export const questions = [
       },
       {
         text: "可能有詐！（小心奕奕試探",
-        scores: { 嚇鼠: 3, 鼠勾以: 2, 煩惱鼠: 1 },
+        scores: { 嚇鼠: 2, 鼠勾以: 2, 煩惱鼠: 3 },
       },
-      { text: "無視", scores: { 鼠巴拉西: 3, 邊緣子: 2, 煩惱鼠: 1 } },
+      { text: "無視", scores: { 鼠巴拉西: 3, 邊緣子: 3, 煩惱鼠: 1 } },
     ],
     img: "/img/Q/Q2.jpg",
   },
@@ -50,7 +50,7 @@ export const questions = [
       },
       {
         text: "看起來像是通往高處的樓梯？",
-        scores: { 番鼠: 1, 邊緣子: 1, 鼠巴拉西: 2 },
+        scores: { 番鼠: 1, 邊緣子: 2, 鼠巴拉西: 3 },
       },
     ],
     img: "/img/Q/Q3.jpg",
