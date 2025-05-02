@@ -87,7 +87,7 @@ export const results = {
     hashtags: [
       { text: "#猶豫", color: "#BFA995" },
       { text: "#焦慮", color: "#A46B50" },
-      { text: "#內耗系", color: "#EBF4E9" },
+      { text: "#內耗系", color: "#b4d0ae" },
     ],
     image: "/img/結果圖背景.png",
     characterImage: "/img/煩惱鼠.png",
