@@ -155,7 +155,7 @@ export default function ResultPage({ name, result }) {
       // 不合描述
       ctx.font = "15px Arial";
       drawWrappedText(ctx, resultData?.reasonIncompatible, 330, 725, 180, 22);
-      ctx.fillText("可能和不太來", 370, 655);
+      ctx.fillText("可能合不太來", 370, 655);
 
       // 合拍貼圖（置中靠上）
       ctx.drawImage(matchTagImg, 70, 655, 210, 60);
