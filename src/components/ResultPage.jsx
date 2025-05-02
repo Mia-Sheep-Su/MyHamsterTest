@@ -334,7 +334,7 @@ export default function ResultPage({ name, result }) {
           <p className={styles.downloadtext}>
             分享我家的倉鼠
             <br />
-            <a href="https://www.instagram.com/stories/highlights/18001313105423954/">
+            <a href="https://www.instagram.com/p/DCTF9tKvn9O/?img_index=1">
               #Berry是一隻倉鼠
             </a>
           </p>
