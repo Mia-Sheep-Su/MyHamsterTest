@@ -1,8 +1,8 @@
 # My Hamster Test｜心理測驗前端專案
 
-這是一個趣味心理測驗網站，用 8 種倉鼠角色代表不同人格特質，結合 RWD 排版與互動式卡片，展示你是哪一隻獨特的鼠！
+這是一個獨立部署的心理測驗網站，透過一系列簡單問題，分析你是哪一隻可愛的倉鼠人格角色 🐹
 
-🔗 **線上預覽：**[https://mia-sheep-su.github.io/MyHamsterTest/](https://mia-sheep-su.github.io/MyHamsterTest/)
+🔗 **線上預覽：** [https://mia-sheep-su.github.io/MyHamsterTest/](https://mia-sheep-su.github.io/MyHamsterTest/)
 
 **所有倉鼠資料：**[https://mia-sheep-su.github.io/AboutMe/#/myhamstertest](https://mia-sheep-su.github.io/AboutMe/#/myhamstertest)
 
@@ -10,39 +10,34 @@
 
 ## 🐹 專案特色
 
-* 💡 角色總覽：資料來自 `/data/results.ts`，內含描述、相合/不合對象與配色
-* 📱 響應式介面：桌機為表格、手機為卡片式切換展示
-* 🎨 標籤與顏色依角色特性客製化
-* ♻️ 元件化開發，資料傳遞由父元件處理
+* ✅ 多題選擇題測驗邏輯
+* 💫 得分加權判斷角色人格
+* 🎨 結果頁展示角色圖片、特質、合拍角色與反差角色
+* 🔁 支援重新作答、分享與導向外部平台
 
 ---
 
 ## 🔧 使用技術
 
 * React 18
-* TypeScript
-* CSS Modules
 * Vite
+* TypeScript
+* React Router v6
+* CSS Modules
+* GitHub Pages 部署
 
 ---
 
-## 📦 資料結構簡介
+## 📁 專案結構
 
-```ts
-export const results = {
-  "番鼠": {
-    name: "番鼠",
-    description: "活潑好動、愛玩愛吃…",
-    hashtags: [
-      { text: "#樂觀", color: "#BF8C6F" },
-      ...
-    ],
-    compatibleWith: "鼠來寶",
-    incompatibleWith: "嚇鼠",
-    ...
-  },
-  ...
-}
+```
+MyHamsterTest/
+├── data/                 # 題目與角色資料
+├── components/           # 測驗頁、選項按鈕、結果頁等元件
+├── pages/                # 啟動頁、測驗流程、結果頁
+├── public/               # 角色圖片與資源
+├── styles/               # CSS Modules
+└── main.tsx
 ```
 
 ---
@@ -58,9 +53,27 @@ npm run dev
 
 ---
 
+## 🚀 部署方式
+
+```bash
+npm run build
+npm run deploy
+```
+
+> 📌 確保 `vite.config.ts` 設定：
+>
+> ```ts
+> export default defineConfig({
+>   base: '/MyHamsterTest/',
+>   ...
+> });
+> ```
+
+---
+
 ## 🙋‍♀️ 作者資訊
 
-由 Mia Sheep 製作，結合插畫角色、性格分類與前端練習，希望讓心理測驗更可愛好玩。
+由 Mia Sheep 製作的趣味人格心理測驗，結合插畫角色、性格分類與互動體驗。
 
 * GitHub: [@Mia-Sheep-Su](https://github.com/Mia-Sheep-Su)
 * Instagram: [@m\_0713\_su](https://www.instagram.com/m_0713_su/)
@@ -68,4 +81,4 @@ npm run dev
 
 ---
 
-想知道你是哪一隻倉鼠？快來試試吧 🐹
+快來測測你是哪隻倉鼠人格吧！🐭
